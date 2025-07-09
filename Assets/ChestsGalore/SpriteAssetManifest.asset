@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1876717734, guid: 8755fc0f8990e9f418149df4a482da57, type: 3}
+  m_Name: SpriteAssetManifest
+  m_EditorClassIdentifier: 
+  spriteAssets:
+  - {fileID: 11400000, guid: 06283675ef003064083719916cdfdbf8, type: 2}
+  - {fileID: 11400000, guid: c687ac57a5bdab742b01b24fa0569068, type: 2}
+  - {fileID: 11400000, guid: 9f958e26a0456d64e9f657156b127b62, type: 2}
+  - {fileID: 11400000, guid: fab4a2a1b1c7f5f4d86a60fc8f132364, type: 2}
+  gradientMaps: []
+  transformAnimations: []

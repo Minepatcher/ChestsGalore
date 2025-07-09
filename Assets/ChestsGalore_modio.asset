@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83df2ae64ce1e94f9c006b9d326bf02, type: 3}
+  m_Name: ChestsGalore_modio
+  m_EditorClassIdentifier: 
+  modId: 0
+  modSettings: {fileID: 11400000, guid: b7120e3ba8a2fb94988c8caf0828b7e6, type: 2}
+  logo: {fileID: 2800000, guid: a85456a82a0b002448c3f6f7a5d29e3a, type: 3}
+  summary: Create all chests from the game instead of having to search for them.

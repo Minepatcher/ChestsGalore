@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -217761678, guid: 8755fc0f8990e9f418149df4a482da57, type: 3}
+  m_Name: chestMagic
+  m_EditorClassIdentifier: 
+  m_defaultPrimaryGradientMap: {fileID: 0}
+  m_defaultSecondaryGradientMap: {fileID: 0}
+  m_defaultTertiaryGradientMap: {fileID: 0}
+  m_editorHideEmissive: 0
+  m_staticSpriteData:
+    texture: {fileID: 2800000, guid: 075fee7f28f347a4b959e015c132f137, type: 3}
+    emissiveTexture: {fileID: 2800000, guid: 0570a0289efacd74ca21060ee27712cc, type: 3}
+    normalTexture: {fileID: 0}
+    pivot: {x: 0.5, y: 0.0625}
+    positionalData: []
+    inheritPivot: 0
+  m_staticVariants:
+  - texture: {fileID: 2800000, guid: 6b41dbdce6ab27b499b37327e1fbbe69, type: 3}
+    emissiveTexture: {fileID: 2800000, guid: 8599d8443757d4c43872667bbbd34b30, type: 3}
+    normalTexture: {fileID: 0}
+    pivot: {x: 0.5, y: 0.05263158}
+    positionalData: []
+    inheritPivot: 0
+  - texture: {fileID: 2800000, guid: 719b2065f440ee7478ba546399af56fe, type: 3}
+    emissiveTexture: {fileID: 2800000, guid: a329f8c4fd17b644ca63359921782d0f, type: 3}
+    normalTexture: {fileID: 0}
+    pivot: {x: 0.5, y: 0.0625}
+    positionalData: []
+    inheritPivot: 0
+  m_animations: []
+  m_events: []
+  m_positionalData: []

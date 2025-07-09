@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc43e4983a160e543856e5ba0421c9e1, type: 3}
+  m_Name: ChestsGalore
+  m_EditorClassIdentifier: 
+  metadata:
+    guid: 001f71fec8724e5688622ed5dcf1d42a
+    name: ChestsGalore
+    skipSafetyChecks: 0
+    disableScripts: 0
+    accessesExtraAssemblies: 1
+    disableHarmonyPatching: 0
+    requiredOn: 0
+    files:
+    - path: Scripts/Scripts/Patches/CreativeCategoryFilter_Patch.cs
+    - path: Scripts/Scripts/Patches/CraftingBuilding_Patch.cs
+    - path: Scripts/Scripts/Modifications/ModModifications.cs
+    - path: Scripts/Scripts/Modifications/DoubleChestModifications.cs
+    - path: Scripts/Scripts/Modifications/ChestModifications.cs
+    - path: Scripts/Scripts/Localization.cs
+    - path: Scripts/Scripts/Components/WorkbenchChestBuilding.cs
+    - path: Scripts/Scripts/Components/ModReskinCondition.cs
+    - path: Scripts/Scripts/Components/ModCraftingUISetting.cs
+    - path: Scripts/Scripts/Components/ModCraftingAuthoring.cs
+    - path: Scripts/Scripts/Components/MagicChest.cs
+    - path: Scripts/Scripts/ChestsGalore.cs
+    - path: Bundles/ChestsGalore_Windows.assetbundle
+    - path: Bundles/ChestsGalore_Linux.assetbundle
+    dependencies:
+    - modName: CoreLib
+      required: 1
+    - modName: CoreLib.Localization
+      required: 1
+    - modName: CoreLib.Resources
+      required: 1
+    - modName: CoreLib.Entity
+      required: 1
+    - modName: ExpandedChestUI
+      required: 1
+  modPath: Assets\ChestsGalore
+  forceReimport: 1
+  buildBundles: 1
+  cacheBundles: 0
+  buildLinux: 1
+  assets:
+  - path: Assets/ChestsGalore/GameObject/ChestsGaloreMod.asset
+    hash: E56E59C7B20B5748B0309DF938F430C062130B8C752EC365D53C43EC2617C268
+  - path: Assets/ChestsGalore/GameObject/ChestsGaloreMod_Chest.asset
+    hash: 84305779548D7C6F398A753182CD17D8B814282720A02D77FCC451A8A8D2BC4B
+  - path: Assets/ChestsGalore/GameObject/ChestsGaloreMod_Workbench.asset
+    hash: 5CB636120B7C60A8536B09D9A90C47FD59153CF324A9DF5E4A9B765047C5D6A2
+  - path: Assets/ChestsGalore/GameObject/MagicChest.prefab
+    hash: D3FF2EA91E5AB44A3D91445C2E79C27286A3F4AF0975DCB32E472CC04F903C7D
+  - path: Assets/ChestsGalore/GameObject/MagicChestEntity.prefab
+    hash: 0A0BF856AABC039DDCF8550B61F3BA0BC262AC3896E5A5D6EB254F474F4D73D8
+  - path: Assets/ChestsGalore/GameObject/WorkbenchChestBuilding.prefab
+    hash: 9C27F9F438B5C839C0010D3639ABF445C2726B652704E9D794A387250AF8FCEE
+  - path: Assets/ChestsGalore/GameObject/WorkbenchChestEntity.prefab
+    hash: 6542631847FCE05E8AAB460BDA748EBFCCF1ECAFA3F1127D2490C8C124961F6E
+  - path: Assets/ChestsGalore/GameObject/WorkbenchChestNextEntity.prefab
+    hash: CEAFA67DB9CE7BC9DD21736EC9C3CED57D0D816C3B10055E60903411B2BB7CAE
+  - path: Assets/ChestsGalore/GameObject/WorkbenchDoubleChestEntity.prefab
+    hash: 31F1797E0F918F9FFCC4191E4309EB648980FF1586327966755926C1266F2E81
+  - path: Assets/ChestsGalore/GameObject/WorkbenchDoubleChestExtraEntity.prefab
+    hash: 0016D064A914A93E1B34AB8DFFC1F012C93D38B0EC77E8204F2F601C7AA6E3C8
+  - path: Assets/ChestsGalore/GameObject/WorkbenchDoubleChestNextEntity.prefab
+    hash: 8DAE9E3B944D1C08459FA8EE957A1D7A4C280980B564466C0247D77EE9F0255D
+  - path: Assets/ChestsGalore/GameObject/WorkbenchMagicChestEntity.prefab
+    hash: D5697E16DAE8CD8CFCA56E527EC51773FCFFAFA4BE5E9811A4FCF801A79688E0
+  - path: Assets/ChestsGalore/SpriteAssetManifest.asset
+    hash: FCF94719CB98ACF847AB29D7F2B348B581C10E710176EA0AB1BE39210BEF885B
+  - path: Assets/ChestsGalore/SpriteAssets/chestMagic.asset
+    hash: BE3E55FC3303C9ABD2E2FBE4107D8BFD623C823B90D0A2FD6EC0AF1861A1D17B
+  - path: Assets/ChestsGalore/SpriteAssets/workbenchChest.asset
+    hash: 85B172D715208B6D8B672727D5F1250B364D53B2F6975BEC7E0E3220D3DCB95A
+  - path: Assets/ChestsGalore/SpriteAssets/workbenchDoubleChest.asset
+    hash: C5FD3E320819096F166011BE055A9D72D96DFF1E1A52A1C7BA300C06EBFEAC4C
+  - path: Assets/ChestsGalore/SpriteAssets/workbenchMagicChest.asset
+    hash: 10639D0EC3202B189E1EC01DA98542ED07EDA68E7BAB01265D3A5C90EB4C146E
+  - path: Assets/ChestsGalore/Sprites/chestMagic_0.png
+    hash: 6039C27940E4434C62E39000589AFDB5AC2836C2A1D6C5DCBD74C88812DF2E9A
+  - path: Assets/ChestsGalore/Sprites/chestMagic_1.png
+    hash: 743C79283F2E16A7A695610E61C5000E8D68EEA22DC543D331603C807F05AC11
+  - path: Assets/ChestsGalore/Sprites/workbenchChest_0.png
+    hash: C778FCAD7FF2477A23A9BE57CFE4F493CDBF17D15C7DD08B00FC5679D33753C3
+  - path: Assets/ChestsGalore/Sprites/workbenchChest_1.png
+    hash: 2205B2677279C7C67ABDC1900D8A3F3B9D51D48F93FAC7318EB431D2C1231AE4
+  - path: Assets/ChestsGalore/Sprites/workbenchDoubleChest_0.png
+    hash: E7FD04698A02BC18E1F2E61F597695A688C2AAF2D7D97220732DCA5A7872693A
+  - path: Assets/ChestsGalore/Sprites/workbenchDoubleChest_1.png
+    hash: BB87CBD3EFA9991BF16FDF43E22B79829832269B9A73F943B29C33B85C435EE3
+  - path: Assets/ChestsGalore/Sprites/workbenchMagicChest_0.png
+    hash: B252B0D4E672B0C644D27F53EAE55235F4F053EC0112846B8E11B09F5089BA8C
+  - path: Assets/ChestsGalore/Sprites/workbenchMagicChest_1.png
+    hash: 32F3B723CDFA768AFE71647E538980BF567BF886953BFEF5B7D83E925296D375
+  - path: Assets/ChestsGalore/Textures/chestMagic.png
+    hash: 6039C27940E4434C62E39000589AFDB5AC2836C2A1D6C5DCBD74C88812DF2E9A
+  - path: Assets/ChestsGalore/Textures/chestMagic_emissive.png
+    hash: 750C6010A7576731040408141AFF52D22E407462D3CD3BD3E332348CCC8916CD
+  - path: Assets/ChestsGalore/Textures/chestMagic_side.png
+    hash: E156BE38D16C61E51C3E536406C64DC5E3A4728FBD13F98793EAB290707C18BD
+  - path: Assets/ChestsGalore/Textures/chestMagic_side_emissive.png
+    hash: 8D609E4DA6B720D089B508233DD08B80F0DD988673FF969D49D927327A888ABD
+  - path: Assets/ChestsGalore/Textures/chestMagic_up.png
+    hash: 80594D10AB668418B1E95543C23C25D99F431AC7B13FD70AAF795FEF854BD682
+  - path: Assets/ChestsGalore/Textures/chestMagic_up_emissive.png
+    hash: 8EBB41DF47B7D8DB4674D50FD505EA2FC4DC8902DF40C45F6E944AC1D056BB7F
+  - path: Assets/ChestsGalore/Textures/workbenchChest.png
+    hash: C778FCAD7FF2477A23A9BE57CFE4F493CDBF17D15C7DD08B00FC5679D33753C3
+  - path: Assets/ChestsGalore/Textures/workbenchChest_side.png
+    hash: 9E33D03098BBC4B061961544DC79D7475B633B770C57846D9E63F261058E3321
+  - path: Assets/ChestsGalore/Textures/workbenchChest_side2.png
+    hash: 0C8EB893622A38A57F69F81CC3593B7694E482088A0F4393613292E52143AA8F
+  - path: Assets/ChestsGalore/Textures/workbenchChest_up.png
+    hash: 7AFA76FAC59E8395C5AAFEB1A932A342C44B57DE60A94A012BE88470B348A57F
+  - path: Assets/ChestsGalore/Textures/workbenchDoubleChest.png
+    hash: 15A001B0D4E670D7638C14769296E87EDCC725A3136826333ACD3A5A0353B62E
+  - path: Assets/ChestsGalore/Textures/workbenchDoubleChest_side.png
+    hash: B7BE68A011D81BC5C625A8D932566CC8A6165F71EEC6DA35253D3400F3B1202A
+  - path: Assets/ChestsGalore/Textures/workbenchDoubleChest_side2.png
+    hash: E1523DDE0E0DD76A64D7065016731668D118E0C024D11DD20C901C605C9C94E9
+  - path: Assets/ChestsGalore/Textures/workbenchDoubleChest_up.png
+    hash: 7DAB3D6F28D36444186E56B88F2547B3966B8DD53F1C917CCDEE809F26A1FE44
+  - path: Assets/ChestsGalore/Textures/workbenchMagicChest.png
+    hash: 162056D954BA7A8BBEEEAE012DAC62810FD3DC02835E2375766AA3F3DF15AB09
+  - path: Assets/ChestsGalore/Textures/workbenchMagicChest_side.png
+    hash: 687E00A8B77BA8C1BF7312522596C14CE20E36199220C673DC88DFDE8887327C
+  - path: Assets/ChestsGalore/Textures/workbenchMagicChest_side2.png
+    hash: C3E4F1BC0F2FA255C953057CCEF37638C6853E8CF56439E93020EAD5A96B6897
+  - path: Assets/ChestsGalore/Textures/workbenchMagicChest_up.png
+    hash: A88F65C216B942CB40E8D30C9E4564102BED189B43C9C8319CCE71DACC9DC73E
+  lastBuildLinux: 1

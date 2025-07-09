@@ -1,0 +1,37 @@
+{
+    "name": "ChestsGalore",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Collections",
+        "Unity.Entities",
+        "PugMod.SDK",
+        "CoreLib",
+        "CoreLib.Localization",
+        "CoreLib.Resources",
+        "CoreLib.Entity",
+        "ExpandedChestUI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "0Harmony.dll",
+        "I2.dll",
+        "NaughtyAttributes.Core.dll",
+        "Pug.Base.dll",
+        "Pug.ECS.Authoring.dll",
+        "Pug.ECS.Components.dll",
+        "Pug.ObjectIDCategory.dll",
+        "Pug.Objects.dll",
+        "Pug.Other.dll",
+        "Pug.UnityExtensions.dll",
+        "PugConversion.dll",
+        "PugMod.SDK.Runtime.dll",
+        "SpriteInstancing.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
