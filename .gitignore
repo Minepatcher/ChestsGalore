@@ -72,8 +72,6 @@ mono_crash.*
 *.unitypackage
 *.unitypackage.meta
 *.app
-*.bat
-*.ps1
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -86,8 +84,10 @@ InitTestScene*.unity*
 /[Aa]ssets/StreamingAssets/aa*
 /[Aa]ssets/AddressableAssetsData/link.xml*
 /[Aa]ssets/Addressables_Temp*
-# Packed Addressables
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+# By default, Addressables content builds will generate addressables_content_state.bin
+# files in platform-specific subfolders, for example:
+# /Assets/AddressableAssetsData/OSX/addressables_content_state.bin
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
 
 # Visual Scripting auto-generated files
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
@@ -97,16 +97,3 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
-
-# Vim
-*.swp
-
-# Jetbrains
-.idea/
-
-# Custom
-/[Aa]ssets/*
-!/[Aa]ssets/ChestsGalore
-!/[Aa]ssets/ChestsGalore.meta
-/[Pp]ackages*
-/[Pp]rojectSettings*
