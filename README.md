@@ -4,3 +4,6 @@ A Core Keeper Mod that allows you to create the chests from the game via Workben
 
 ## Chest Recipes
 [Wiki Chest Recipes](../../wiki/Chest-Recipes)
+
+## Double Chest Recipes
+[Wiki Double Chest Recipes](../../wiki/Double-Chest-Recipes)
