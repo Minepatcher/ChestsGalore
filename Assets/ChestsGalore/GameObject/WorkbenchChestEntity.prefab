@@ -27,8 +27,8 @@ GameObject:
   - component: {fileID: 114562114912242838}
   - component: {fileID: 7409523984806464449}
   - component: {fileID: 3733163753312532181}
-  - component: {fileID: -8225124307805094124}
   - component: {fileID: 3091553487706230443}
+  - component: {fileID: 1656289439647862769}
   m_Layer: 0
   m_Name: WorkbenchChestEntity
   m_TagString: Untagged
@@ -89,9 +89,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sellValue: -1
   buyValueMultiplier: 1
-  icon: {fileID: 21300000, guid: a84ae17478c754d4998fde463f88965e, type: 3}
+  icon: {fileID: 21300000, guid: f44669504745dd9459d19d9afad92756, type: 3}
   iconOffset: {x: 0, y: 0}
-  smallIcon: {fileID: 21300000, guid: 90a141156451c2745ab207105dffa1b9, type: 3}
+  smallIcon: {fileID: 21300000, guid: 4aaada5741559d744bad7ef8b70947d9, type: 3}
   isStackable: 1
   requiredObjectsToCraft:
   - objectName: Wood
@@ -523,18 +523,6 @@ MonoBehaviour:
   m_Script: {fileID: -2043779946, guid: a25fd8c6d4fbb824e9d4fe4466f12a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-8225124307805094124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908220941404268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276b4b9264304dc2b5f1e3feb621bc98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3091553487706230443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,3 +554,23 @@ MonoBehaviour:
     mRTL_ConvertNumbers: 0
     m_DontLocalizeParameters: 0
   craftingUIBackgroundVariation: 0
+--- !u!114 &1656289439647862769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908220941404268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407ff6cfe742fed44a46f897d227cb8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dependsOnVariation: 0
+  variation: 0
+  season: 0
+  reskin:
+  - skin: {fileID: 0}
+    gradientMap: {fileID: 2800000, guid: 31b6fd401e5b7344dafbd723a8719b17, type: 3}
+    hasEmissiveColorOverride: 0
+    emissiveColorOverride: {r: 0, g: 0, b: 0, a: 0}

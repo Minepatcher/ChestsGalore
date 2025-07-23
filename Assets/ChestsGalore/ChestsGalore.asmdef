@@ -4,6 +4,7 @@
     "references": [
         "Unity.Collections",
         "Unity.Entities",
+        "Unity.Mathematics",
         "PugMod.SDK",
         "CoreLib",
         "CoreLib.Localization",

@@ -1,5 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using ChestsGalore.Scripts.Modifications;
+using ChestsGalore.Scripts.Poolable;
+using ChestsGalore.Scripts.ScriptableObjects;
 using CoreLib;
 using CoreLib.Localization;
 using CoreLib.Submodules.ModEntity;
@@ -12,12 +15,13 @@ namespace ChestsGalore.Scripts
 {
     public class ChestsGalore : IMod
     {
-        internal const string Version = "0.0.1";
+        internal const string Version = "0.1.0";
         internal const string ModID = "ChestsGalore";
         internal const string FriendlyName = "Chests Galore";
         internal LoadedMod ModInfo;
         internal static readonly Logger Log = new (FriendlyName);
-        internal static readonly List<GameObject> ModChestWorkbenches = new();
+        internal static readonly List<GameObject> ChestGaloreEntities = new();
+        internal static readonly List<ModObjectIDCategory>  ModObjectIDCategories = new();
         
         public void EarlyInit()
         {
@@ -32,7 +36,6 @@ namespace ChestsGalore.Scripts
                 Log.LogInfo($"Failed to load {FriendlyName}: metadata not found!");
                 return;
             }
-            // Register single type
             EntityModule.RegisterEntityModifications(typeof(ModModifications));
             EntityModule.RegisterEntityModifications(typeof(ChestModifications));
             EntityModule.RegisterEntityModifications(typeof(DoubleChestModifications));
@@ -42,6 +45,10 @@ namespace ChestsGalore.Scripts
 
         public void Init()
         {
+            foreach (var category in ModObjectIDCategories.ToList())
+            {
+                ObjectIDCategoryManager.Add(category.GetObjectIDCategory());
+            }
         }
 
         public void Shutdown()
@@ -54,16 +61,15 @@ namespace ChestsGalore.Scripts
             switch (obj)
             {
                 case GameObject gameObject:
-                    EntityMonoBehaviour entityMono = gameObject.GetComponent<EntityMonoBehaviour>();
-                    if (entityMono is not null) EntityModule.EnablePooling(gameObject);
-                    ObjectAuthoring objAuthoring = gameObject.GetComponent<ObjectAuthoring>();
-                    if (objAuthoring is not null)
-                    {
-                        if (objAuthoring.objectName.Contains("ChestsGalore:Workbench"))
-                            ModChestWorkbenches.Add(gameObject);
-                        EntityModule.AddEntity(objAuthoring.objectName, objAuthoring);
-                        EntityModule.AddToAuthoringList(gameObject);
-                    }
+                    var isPoolableObject = gameObject.TryGetComponent(out PooledGraphicalObject pooledGraphicalObject);
+                    if (isPoolableObject)
+                        PooledGraphicalObjectConverter.Register(pooledGraphicalObject);
+                    var hasObjectAuthoring = gameObject.TryGetComponent(out ObjectAuthoring objAuthoring);
+                    if (hasObjectAuthoring)
+                        ChestGaloreEntities.Add(gameObject);
+                    break;
+                case ModObjectIDCategory category:
+                    ModObjectIDCategories.Add(category);
                     break;
             }
         }

@@ -8,7 +8,7 @@ namespace ChestsGalore.Scripts.Components
     [DisallowMultipleComponent]
     public class ModReskinCondition : MonoBehaviour
     {
-        public GameObject BuildingPrefab => GetComponent<ObjectAuthoring>().graphicalPrefab;
+        public GameObject BuildingPrefab => GetComponent<ObjectAuthoring>()?.graphicalPrefab;
         
         [InfoBox("The sprites are re-skinned based on the first matching entry." +
                  "If none match, the default skin is used. Each entry in the reskin list applies to the corresponding sprite in the spritesToReskin list.")]
@@ -20,15 +20,16 @@ namespace ChestsGalore.Scripts.Components
         [Tooltip("None matches any season.")]
         public Season season;
         [Tooltip("If null, the sprite's corresponding default is used.")]
-        public List<SpriteSkinFromEntityAndSeason.SkinAndGradientMap> reskin;
+        public List<SpriteSkinFromEntityAndSeason.SkinAndGradientMap> reskin = new();
 
         public void OnValidate()
         {
-            if (BuildingPrefab is null) return;
-            SpriteSkinFromEntityAndSeason skin = BuildingPrefab.GetComponent<SpriteSkinFromEntityAndSeason>();
-            SpriteSkinFromEntityAndSeason.SkinAndGradientMap elementToFillOutWith = reskin.Count <= 0 ? new SpriteSkinFromEntityAndSeason.SkinAndGradientMap() : reskin[^1];
+            var skin = BuildingPrefab?.GetComponent<SpriteSkinFromEntityAndSeason>();
+            if (skin is null) return;
+            var elementToFillOutWith = reskin.Count <= 0 ? new SpriteSkinFromEntityAndSeason.SkinAndGradientMap() : reskin[^1];
             int count = skin.spritesToReskin.Count;
             reskin.Resize(elementToFillOutWith, count);
+            
         }
     }
 }

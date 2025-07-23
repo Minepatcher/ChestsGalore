@@ -7,14 +7,12 @@ namespace ChestsGalore.Scripts.Components
     {
         public override void OnOccupied()
         {
-            GameObject mainWorkbench =
-                ChestsGalore.ModChestWorkbenches.Find(x => x.GetEntityObjectID() == objectData.objectID);
-            SpriteSkinFromEntityAndSeason skin = GetComponent<SpriteSkinFromEntityAndSeason>();
-            craftingUIOverrideSettings.Clear();
+            var mainWorkbench = ChestsGalore.ChestGaloreEntities.Find(x => x.GetEntityObjectID() == objectData.objectID);
+            var skin = GetComponent<SpriteSkinFromEntityAndSeason>();
             if (mainWorkbench is not null)
             {
-                ObjectID objectID = mainWorkbench.GetEntityObjectID();
-                ModCraftingUISetting setting = mainWorkbench.GetComponent<ModCraftingUISetting>();
+                var objectID = mainWorkbench.GetEntityObjectID();
+                var setting = mainWorkbench.GetComponent<ModCraftingUISetting>();
                 
                 if (setting is not null)
                 {
@@ -23,12 +21,12 @@ namespace ChestsGalore.Scripts.Components
                     craftingUITitleRightBox = setting.craftingUITitleRightBox;
                     craftingUIBackgroundVariation = setting.craftingUIBackgroundVariation;
                 }
-                ModCraftingAuthoring modCraftingAuthoring = mainWorkbench.GetComponent<ModCraftingAuthoring>();
-                foreach (ModCraftingAuthoring building in modCraftingAuthoring.includeCraftedObjectsFromBuildings)
+                var modCraftingAuthoring = mainWorkbench.GetComponent<ModCraftingAuthoring>();
+                foreach (var building in modCraftingAuthoring.includeCraftedObjectsFromBuildings)
                 {
-                    ModCraftingUISetting buildingSetting = building.GetComponent<ModCraftingUISetting>();
+                    var buildingSetting = building.GetComponent<ModCraftingUISetting>();
                     if (buildingSetting is null) continue;
-                    CraftingUISettings newSetting = new
+                    var newSetting = new CraftingUISettings
                     (
                         building.GetEntityObjectID(),
                         buildingSetting.craftingUITitle,
@@ -40,10 +38,10 @@ namespace ChestsGalore.Scripts.Components
                     if(!craftingUIOverrideSettings.Contains(newSetting))
                         craftingUIOverrideSettings.Add(newSetting);
                 }
-                ModReskinCondition reSkin = mainWorkbench.GetComponent<ModReskinCondition>();
+                var reSkin = mainWorkbench.GetComponent<ModReskinCondition>();
                 if (reSkin is not null)
                 {
-                    SpriteSkinFromEntityAndSeason.ReskinCondition newSkin = new()
+                    var newSkin = new SpriteSkinFromEntityAndSeason.ReskinCondition
                     {
                         objectID = objectID,
                         dependsOnVariation = reSkin.dependsOnVariation,
@@ -54,9 +52,9 @@ namespace ChestsGalore.Scripts.Components
                     // ReSharper disable once UsageOfDefaultStructEquality
                     if(!skin.reskinConditions.Contains(newSkin))
                         skin.reskinConditions.Add(newSkin);
+                    skin.UpdateGraphicsFromObjectInfo(objectInfo);
                 }
             }
-            skin?.UpdateGraphicsFromObjectInfo(objectInfo);
             base.OnOccupied();
         }
     }

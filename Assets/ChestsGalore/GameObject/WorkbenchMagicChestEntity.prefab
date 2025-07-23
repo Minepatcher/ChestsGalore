@@ -29,7 +29,6 @@ GameObject:
   - component: {fileID: 3733163753312532181}
   - component: {fileID: 6367094171633608693}
   - component: {fileID: 6494364508704182799}
-  - component: {fileID: -197952688481380679}
   m_Layer: 0
   m_Name: WorkbenchMagicChestEntity
   m_TagString: Untagged
@@ -90,9 +89,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sellValue: -1
   buyValueMultiplier: 1
-  icon: {fileID: 21300000, guid: 35437d009f12fb24b85aaea883359adc, type: 3}
+  icon: {fileID: 21300000, guid: f02ed0da80ec6bb4ebc8b1b018f6dd64, type: 3}
   iconOffset: {x: 0, y: 0}
-  smallIcon: {fileID: 21300000, guid: 0ad4935e95ef2d0428340e15e33e15d7, type: 3}
+  smallIcon: {fileID: 21300000, guid: aefc04c8d395a5b468dccac6528fb9a5, type: 3}
   isStackable: 1
   requiredObjectsToCraft:
   - objectName: PandoriumBar
@@ -553,23 +552,7 @@ MonoBehaviour:
   variation: 0
   season: 0
   reskin:
-  - skin: {fileID: 11400000, guid: fab4a2a1b1c7f5f4d86a60fc8f132364, type: 2}
-    gradientMap: {fileID: 0}
+  - skin: {fileID: 0}
+    gradientMap: {fileID: 2800000, guid: 1e342f8ebe29072458a149346603580b, type: 3}
     hasEmissiveColorOverride: 0
     emissiveColorOverride: {r: 0, g: 0, b: 0, a: 0}
-  - skin: {fileID: 11400000, guid: fab4a2a1b1c7f5f4d86a60fc8f132364, type: 2}
-    gradientMap: {fileID: 0}
-    hasEmissiveColorOverride: 0
-    emissiveColorOverride: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &-197952688481380679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908220941404268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276b4b9264304dc2b5f1e3feb621bc98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

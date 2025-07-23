@@ -3,7 +3,6 @@ using System.Linq;
 using CoreLib.Util.Extensions;
 using HarmonyLib;
 
-// ReSharper disable InconsistentNaming
 namespace ChestsGalore.Scripts.Patches
 {
     [HarmonyPatch]
@@ -13,38 +12,25 @@ namespace ChestsGalore.Scripts.Patches
         [HarmonyPrefix]
         public static bool OnAwakeOfCategory(CraftingSelectorFilterCategoryUI __instance)
         {
+            var pass = false;
+            var currCategories = __instance.GetValue<List<ObjectIDCategory>>("categories");
+            List<ObjectIDCategory> newCategories = new();
             switch (__instance.gameObject.name)
             {
                 case "CategoryFilter":
-                    List<ObjectIDCategory> parentCategories = __instance.GetValue<List<ObjectIDCategory>>("categories");
-                    ObjectIDCategory chestsGaloreMod = ObjectIDCategoryManager.ParentCategories.ToList()
-                        .Find(x => x.name == "ChestsGaloreMod");
-                    if (!parentCategories.Contains(chestsGaloreMod))
-                    {
-                        parentCategories.Add(chestsGaloreMod);
-                        __instance.SetValue("categories", parentCategories);
-                    }
+                    newCategories = ObjectIDCategoryManager.ParentCategories.ToList();
                     break;
                 case "SubCategoryFilter":
-                    bool pass = false;
-                    List<ObjectIDCategory> subCategories = __instance.GetValue<List<ObjectIDCategory>>("categories");
-                    ObjectIDCategory chests = ObjectIDCategoryManager.SubCategories.ToList()
-                        .Find(x => x.name == "ChestsGaloreMod_Chest");
-                    ObjectIDCategory workbenches = ObjectIDCategoryManager.SubCategories.ToList()
-                        .Find(x => x.name == "ChestsGaloreMod_Workbench");
-                    if (!subCategories.Contains(chests))
-                    {
-                        subCategories.Add(chests);
-                        pass = true;
-                    }
-                    if (!subCategories.Contains(workbenches))
-                    {
-                        subCategories.Add(workbenches);
-                        pass = true;
-                    }
-                    if(pass) __instance.SetValue("categories", subCategories);
+                    newCategories = ObjectIDCategoryManager.SubCategories.ToList();
                     break;
             }
+            foreach (var newCategory in newCategories.FindAll(x => x.name.Contains(ChestsGalore.ModID)))
+            {
+                if (currCategories.Contains(newCategory)) continue;
+                currCategories.Add(newCategory);
+                pass = true;
+            }
+            if(pass) __instance.SetValue("categories", currCategories);
             return true;
         }
     }

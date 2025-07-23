@@ -15,7 +15,8 @@ MonoBehaviour:
   spriteAssets:
   - {fileID: 11400000, guid: 06283675ef003064083719916cdfdbf8, type: 2}
   - {fileID: 11400000, guid: c687ac57a5bdab742b01b24fa0569068, type: 2}
-  - {fileID: 11400000, guid: 9f958e26a0456d64e9f657156b127b62, type: 2}
-  - {fileID: 11400000, guid: fab4a2a1b1c7f5f4d86a60fc8f132364, type: 2}
-  gradientMaps: []
+  gradientMaps:
+  - {fileID: 2800000, guid: 31b6fd401e5b7344dafbd723a8719b17, type: 3}
+  - {fileID: 2800000, guid: 90e59b4836bcc024a9a4247ac9290e54, type: 3}
+  - {fileID: 2800000, guid: 1e342f8ebe29072458a149346603580b, type: 3}
   transformAnimations: []

@@ -97,8 +97,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4362259424348712}
   - component: {fileID: 7280721546255271669}
-  - component: {fileID: 4294169622704283236}
-  - component: {fileID: 2386111273374302602}
+  - component: {fileID: 8958752879918220333}
+  - component: {fileID: 6296973216151883917}
+  - component: {fileID: 8088942735518637221}
+  - component: {fileID: 388253542900088299}
   m_Layer: 0
   m_Name: WorkbenchChestBuilding
   m_TagString: Untagged
@@ -195,7 +197,7 @@ MonoBehaviour:
   craftingCategoryWindowInfos: []
   SRShadow: {fileID: 0}
   particleSpawnLocation: {fileID: 108394793632772078}
---- !u!114 &4294169622704283236
+--- !u!114 &8958752879918220333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,8 +212,8 @@ MonoBehaviour:
   spritesToRotate:
   - {fileID: 7568766159106706509}
   - {fileID: 3005554013292434928}
-  reflectSides: 0
---- !u!114 &2386111273374302602
+  reflectSides: 1
+--- !u!114 &6296973216151883917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,8 +227,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spritesToReskin:
   - {fileID: 7568766159106706509}
-  - {fileID: 3005554013292434928}
   reskinConditions: []
+--- !u!114 &8088942735518637221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284432609753473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e05554f5ab4a1294098ebee2b27f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refreshCraftingUI: 1
+--- !u!114 &388253542900088299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284432609753473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001df786fc52b6d4b887f93a5eb248ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialSize: 16
+  maxFreeSize: 16
+  maxSize: 1024
 --- !u!1 &177096252312240637
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,8 +305,8 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   emissiveColor: {r: 1, g: 1, b: 1, a: 1}
   flashColor: {r: 0, g: 0, b: 0, a: 0}
-  outlineColor: {r: 0, g: 0, b: 0, a: 0}
-  primaryGradientMap: {fileID: 0}
+  outlineColor: {r: 1, g: 1, b: 1, a: 0}
+  primaryGradientMap: {fileID: 2800000, guid: 31b6fd401e5b7344dafbd723a8719b17, type: 3}
   secondaryGradientMap: {fileID: 0}
   tertiaryGradientMap: {fileID: 0}
   material: {fileID: 2100000, guid: 571bf3c761ee86c4f9d8e65be27151be, type: 2}
@@ -403,11 +432,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_asset: {fileID: 11400000, guid: c687ac57a5bdab742b01b24fa0569068, type: 2}
   skin: {fileID: 0}
-  color: {r: 1, g: 1, b: 1, a: 0.7019608}
+  color: {r: 0, g: 0, b: 0, a: 0.7019608}
   emissiveColor: {r: 1, g: 1, b: 1, a: 1}
   flashColor: {r: 0, g: 0, b: 0, a: 0}
   outlineColor: {r: 1, g: 1, b: 1, a: 0}
-  primaryGradientMap: {fileID: 0}
+  primaryGradientMap: {fileID: 2800000, guid: fd83cfc76ceb7034d866b73a84d382f3, type: 3}
   secondaryGradientMap: {fileID: 0}
   tertiaryGradientMap: {fileID: 0}
   material: {fileID: 2100000, guid: e9579b7574bbaa146a669beeabfcbb75, type: 2}

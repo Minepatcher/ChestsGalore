@@ -27,7 +27,7 @@ MonoBehaviour:
   - texture: {fileID: 2800000, guid: 6b41dbdce6ab27b499b37327e1fbbe69, type: 3}
     emissiveTexture: {fileID: 2800000, guid: 8599d8443757d4c43872667bbbd34b30, type: 3}
     normalTexture: {fileID: 0}
-    pivot: {x: 0.5, y: 0.05263158}
+    pivot: {x: 0.5, y: 0.05}
     positionalData: []
     inheritPivot: 0
   - texture: {fileID: 2800000, guid: 719b2065f440ee7478ba546399af56fe, type: 3}

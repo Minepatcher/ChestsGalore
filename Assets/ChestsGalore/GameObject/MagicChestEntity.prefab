@@ -29,7 +29,6 @@ GameObject:
   - component: {fileID: 3664615367806407618}
   - component: {fileID: 5393185860850417755}
   - component: {fileID: -4055195561200577849}
-  - component: {fileID: -2618156932789693282}
   m_Layer: 0
   m_Name: MagicChestEntity
   m_TagString: Untagged
@@ -534,15 +533,3 @@ MonoBehaviour:
   isLever: 0
   isCrossConnector: 0
   isWire: 0
---- !u!114 &-2618156932789693282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669984657354477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276b4b9264304dc2b5f1e3feb621bc98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -98,15 +98,15 @@ namespace ChestsGalore.Scripts
             });
             
             //Creative UI Item Categories
-            LocalizationModule.AddTerm("ItemCategory/ChestsGaloreMod", new Dictionary<string, string>
+            LocalizationModule.AddTerm("ItemCategory/ChestsGalore", new Dictionary<string, string>
             {
                 { "en", "Chests Galore" }
             });
-            LocalizationModule.AddTerm("ItemCategory/ChestsGaloreMod_Workbench", new Dictionary<string, string>
+            LocalizationModule.AddTerm("ItemCategory/ChestsGalore_Workbench", new Dictionary<string, string>
             {
                 { "en", "Workbench" }
             });
-            LocalizationModule.AddTerm("ItemCategory/ChestsGaloreMod_Chest", new Dictionary<string, string>
+            LocalizationModule.AddTerm("ItemCategory/ChestsGalore_Chest", new Dictionary<string, string>
             {
                 { "en", "Chest" }
             });

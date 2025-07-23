@@ -6,8 +6,6 @@ namespace ChestsGalore.Scripts.Components
     [DisallowMultipleComponent]
     public class ModCraftingUISetting : MonoBehaviour
     {
-        public GameObject BuildingPrefab => GetComponent<ObjectAuthoring>().graphicalPrefab;
-        
         [Header("Crafting Building Settings")]
         
         [Tooltip("Center Window Title in Crafting Buildings")]

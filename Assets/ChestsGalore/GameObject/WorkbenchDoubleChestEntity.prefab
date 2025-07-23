@@ -29,7 +29,6 @@ GameObject:
   - component: {fileID: 3733163753312532181}
   - component: {fileID: 1434368195288508093}
   - component: {fileID: -4706281012685333100}
-  - component: {fileID: 172206453875288449}
   m_Layer: 0
   m_Name: WorkbenchDoubleChestEntity
   m_TagString: Untagged
@@ -90,9 +89,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sellValue: -1
   buyValueMultiplier: 1
-  icon: {fileID: 21300000, guid: 4c2c0663b7ddd8f42b549d14207f682c, type: 3}
+  icon: {fileID: 21300000, guid: 9c93b9b59fe0dc044885e17aaadfec07, type: 3}
   iconOffset: {x: 0, y: 0}
-  smallIcon: {fileID: 21300000, guid: 08667dd1500a1ff44872b15dc3e32c8f, type: 3}
+  smallIcon: {fileID: 21300000, guid: f55a859c0bae8c04c8fc0ca7b844d44c, type: 3}
   isStackable: 1
   requiredObjectsToCraft:
   - objectName: GlurchChest
@@ -583,23 +582,7 @@ MonoBehaviour:
   variation: 0
   season: 0
   reskin:
-  - skin: {fileID: 11400000, guid: 9f958e26a0456d64e9f657156b127b62, type: 2}
-    gradientMap: {fileID: 0}
+  - skin: {fileID: 0}
+    gradientMap: {fileID: 2800000, guid: 90e59b4836bcc024a9a4247ac9290e54, type: 3}
     hasEmissiveColorOverride: 0
     emissiveColorOverride: {r: 0, g: 0, b: 0, a: 0}
-  - skin: {fileID: 11400000, guid: 9f958e26a0456d64e9f657156b127b62, type: 2}
-    gradientMap: {fileID: 0}
-    hasEmissiveColorOverride: 0
-    emissiveColorOverride: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &172206453875288449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908220941404268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276b4b9264304dc2b5f1e3feb621bc98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

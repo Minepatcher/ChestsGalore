@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 4217113378505897}
   - component: {fileID: 5163574902905182399}
   - component: {fileID: 114843323942682917}
+  - component: {fileID: 3487422833416946749}
   m_Layer: 0
   m_Name: MagicChest
   m_TagString: Untagged
@@ -351,6 +352,21 @@ MonoBehaviour:
   - {fileID: 114854373770374976}
   - {fileID: 114746071735070035}
   reflectSides: 1
+--- !u!114 &3487422833416946749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907394786319148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001df786fc52b6d4b887f93a5eb248ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialSize: 16
+  maxFreeSize: 16
+  maxSize: 1024
 --- !u!1 &8254163439999644172
 GameObject:
   m_ObjectHideFlags: 0

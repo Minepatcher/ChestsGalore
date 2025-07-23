@@ -89,3 +89,4 @@ crashlytics-build.properties
 /[Aa]ssets/Resources*
 /[Pp]ackages*
 /[Pp]rojectSettings*
+/[Aa]ssets/Examples*
