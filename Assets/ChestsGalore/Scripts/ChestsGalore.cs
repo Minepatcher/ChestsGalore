@@ -1,12 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using ChestsGalore.Scripts.Modifications;
-using ChestsGalore.Scripts.Poolable;
 using ChestsGalore.Scripts.ScriptableObjects;
 using CoreLib;
-using CoreLib.Localization;
-using CoreLib.Submodules.ModEntity;
-using CoreLib.Util.Extensions;
+using CoreLib.Submodule.Entity;
+using CoreLib.Util.Extension;
 using PugMod;
 using UnityEngine;
 using Logger = CoreLib.Util.Logger;
@@ -15,67 +12,61 @@ namespace ChestsGalore.Scripts
 {
     public class ChestsGalore : IMod
     {
-        internal const string Version = "0.1.0";
+        private const string Version = "0.1.0";
         internal const string ModID = "ChestsGalore";
-        internal const string FriendlyName = "Chests Galore";
-        internal LoadedMod ModInfo;
-        internal static readonly Logger Log = new (FriendlyName);
-        internal static readonly List<GameObject> ChestGaloreEntities = new();
-        internal static readonly List<ModObjectIDCategory>  ModObjectIDCategories = new();
+        private const string FriendlyName = "Chests Galore";
+        private LoadedMod _modInfo;
+        private static readonly Logger Log = new (FriendlyName);
+        private static readonly List<ModObjectIDCategory>  ModObjectIDCategories = new();
+        private static readonly List<ObjectIDCategory> ObjectIDCategories = new();
         
         public void EarlyInit()
         {
             Log.LogInfo($"{FriendlyName} version: {Version}");
-            CoreLibMod.LoadModules(
-                typeof(EntityModule),
-                typeof(LocalizationModule)
-                );
-            ModInfo = this.GetModInfo();
-            if(ModInfo == null)
+            CoreLibMod.LoadSubmodule(typeof(EntityModule));
+            _modInfo = this.GetModInfo();
+            if (_modInfo == null)
             {
-                Log.LogInfo($"Failed to load {FriendlyName}: metadata not found!");
+                Log.LogError($"Failed to load {FriendlyName}: metadata not found!");
                 return;
             }
-            EntityModule.RegisterEntityModifications(typeof(ModModifications));
-            EntityModule.RegisterEntityModifications(typeof(ChestModifications));
-            EntityModule.RegisterEntityModifications(typeof(DoubleChestModifications));
-            Localization.LocalizeAllTerms();
-            Log.LogInfo($"{FriendlyName} loaded successfully");
+            ModObjectIDCategories.AddRange(_modInfo.Assets.OfType<ModObjectIDCategory>());
         }
 
         public void Init()
         {
-            foreach (var category in ModObjectIDCategories.ToList())
+            Log.LogInfo($"{FriendlyName} Initialize");
+            foreach (var category in ModObjectIDCategories)
             {
-                ObjectIDCategoryManager.Add(category.GetObjectIDCategory());
+                var objCategory = category.GetObjectIDCategory();
+                ObjectIDCategories.Add(objCategory);
+                ObjectIDCategoryManager.Add(objCategory);
             }
-        }
-
-        public void Shutdown()
-        {
-        }
-
-        public void ModObjectLoaded(Object obj)
-        {
-            if (obj is null) return;
-            switch (obj)
+            var craftingSelectorUI = Manager.ui.creativeModeUI;
+            var categoryFilters = craftingSelectorUI.GetComponentsInChildren<CraftingSelectorFilterCategoryUI>(true);
+            foreach (var filter in categoryFilters)
             {
-                case GameObject gameObject:
-                    var isPoolableObject = gameObject.TryGetComponent(out PooledGraphicalObject pooledGraphicalObject);
-                    if (isPoolableObject)
-                        PooledGraphicalObjectConverter.Register(pooledGraphicalObject);
-                    var hasObjectAuthoring = gameObject.TryGetComponent(out ObjectAuthoring objAuthoring);
-                    if (hasObjectAuthoring)
-                        ChestGaloreEntities.Add(gameObject);
-                    break;
-                case ModObjectIDCategory category:
-                    ModObjectIDCategories.Add(category);
-                    break;
+                var currCategories = filter.GetValue<List<ObjectIDCategory>>("categories");
+                List<ObjectIDCategory> newCategories = new();
+                switch (filter.gameObject.name)
+                {
+                    case "CategoryFilter":
+                        newCategories = ObjectIDCategories.Where(x => !x.name.Contains('_')).ToList();
+                        break;
+                    case "SubCategoryFilter":
+                        newCategories = ObjectIDCategories.Where(x => x.name.Contains('_')).ToList();
+                        break;
+                }
+                currCategories.AddRange(newCategories);
+                filter.SetValue("categories", currCategories);
             }
+            Log.LogInfo($"{FriendlyName} loaded successfully");
         }
 
-        public void Update()
-        {
-        }
+        public void Shutdown() { }
+
+        public void ModObjectLoaded(Object obj) { }
+
+        public void Update() { }
     }
 }

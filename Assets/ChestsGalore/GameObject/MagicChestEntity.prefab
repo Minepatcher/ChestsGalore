@@ -24,11 +24,12 @@ GameObject:
   - component: {fileID: 114124348565900175}
   - component: {fileID: 114670843424444664}
   - component: {fileID: 114084928636568615}
-  - component: {fileID: 826792959196135198}
+  - component: {fileID: 3801775474955659481}
   - component: {fileID: 114568907156736578}
   - component: {fileID: 3664615367806407618}
   - component: {fileID: 5393185860850417755}
   - component: {fileID: -4055195561200577849}
+  - component: {fileID: 8800659086599498581}
   m_Layer: 0
   m_Name: MagicChestEntity
   m_TagString: Untagged
@@ -71,6 +72,7 @@ MonoBehaviour:
   objectType: 800
   tags: 19000000
   rarity: 3
+  salvageMultiplier: 1
   graphicalPrefab: {fileID: 1907394786319148, guid: d4dba4422d67ea04da1593312a1f2c2a,
     type: 3}
   isCustomScenePrefab: 0
@@ -297,6 +299,8 @@ MonoBehaviour:
   prefabTileSize: {x: 1, y: 1}
   prefabCornerOffset: {x: 0, y: 0}
   centerIsAtEntityPosition: 0
+  objectCanBeToggledToNewNonRotationOption: 0
+  toggledToNewNonRotationOptions: 0
   variationToPlace: 0
   canBePlacedOnPlayer: 0
   canBePlacedOnAnyWalkableTile: 1
@@ -317,6 +321,7 @@ MonoBehaviour:
   appearInMapUI: 0
   mapColor: {r: 0, g: 0, b: 0, a: 0}
   alignWithPlayerDirection: 0
+  displayPlaceableType: 0
 --- !u!114 &114391852642256876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,7 +414,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1669984657354477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 178800199, guid: 3519ac58e5ff54941a4a69512016923c, type: 3}
+  m_Script: {fileID: 178800199, guid: 9a1db145e9314404d8da91bdc1557235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playIdleAnimation: 1
@@ -422,10 +427,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1669984657354477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1089278989, guid: 3519ac58e5ff54941a4a69512016923c, type: 3}
+  m_Script: {fileID: -1089278989, guid: 9a1db145e9314404d8da91bdc1557235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0
+  refreshStateOnNewDamageTaken: 0
 --- !u!114 &114670843424444664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,7 +441,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1669984657354477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 282287656, guid: 3519ac58e5ff54941a4a69512016923c, type: 3}
+  m_Script: {fileID: 282287656, guid: 9a1db145e9314404d8da91bdc1557235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   overrideTimeBeforeDestroy: 0
@@ -459,8 +465,9 @@ MonoBehaviour:
   reduction: 0
   maxDamagePerHit: 1
   minDamagePerHit: 0
+  ignoreReductionWhenDamagedByDrill: 0
   level: {fileID: 0}
---- !u!114 &826792959196135198
+--- !u!114 &3801775474955659481
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -469,7 +476,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1669984657354477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -762863004, guid: 9a1db145e9314404d8da91bdc1557235, type: 3}
+  m_Script: {fileID: -2063762086, guid: 236b8c87e0322174284949cef39aaa93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114568907156736578
@@ -523,7 +530,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1669984657354477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1631903901, guid: 9a1db145e9314404d8da91bdc1557235, type: 3}
+  m_Script: {fileID: 1997878, guid: 236b8c87e0322174284949cef39aaa93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   circuitType: 0
@@ -531,5 +538,19 @@ MonoBehaviour:
   blocksElectricity: 1
   sourceEnergy: 25
   isLever: 0
-  isCrossConnector: 0
+  circuitConnectionMode: 0
   isWire: 0
+--- !u!114 &8800659086599498581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669984657354477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae7684ea6f84c868d0b30fa9ecd2b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bindToRootWorkbench: 0
+  amount: 1

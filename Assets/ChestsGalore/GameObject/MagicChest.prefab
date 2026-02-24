@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1261466667890045}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0625, z: -0.3125}
+  m_LocalPosition: {x: 0, y: 0.125, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41,11 +41,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1261466667890045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1908045241, guid: 8755fc0f8990e9f418149df4a482da57, type: 3}
+  m_Script: {fileID: 1908045241, guid: 292700ef68995bdb2163e35989fc7eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_asset: {fileID: 11400000, guid: 06283675ef003064083719916cdfdbf8, type: 2}
+  m_asset: {fileID: 0}
   skin: {fileID: 0}
+  m_assetRef:
+    m_address:
+      m_low: -2543247459105505089
+      m_high: -8473400880334055702
+  skinRef:
+    m_address:
+      m_low: 0
+      m_high: 0
   color: {r: 1, g: 1, b: 1, a: 1}
   emissiveColor: {r: 1, g: 1, b: 1, a: 1}
   flashColor: {r: 0, g: 0, b: 0, a: 0}
@@ -53,7 +61,19 @@ MonoBehaviour:
   primaryGradientMap: {fileID: 0}
   secondaryGradientMap: {fileID: 0}
   tertiaryGradientMap: {fileID: 0}
-  material: {fileID: 2100000, guid: 571bf3c761ee86c4f9d8e65be27151be, type: 2}
+  primaryGradientMapRef:
+    m_address:
+      m_low: 0
+      m_high: 0
+  secondaryGradientMapRef:
+    m_address:
+      m_low: 0
+      m_high: 0
+  tertiaryGradientMapRef:
+    m_address:
+      m_low: 0
+      m_high: 0
+  material: {fileID: 2100000, guid: 1a7b8aafc2c88d640b012a82d8df3703, type: 2}
   m_startAnimationHash: 0
   m_startVariantHash: 0
   animationTimescale: 1
@@ -106,12 +126,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1288852072713476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1216031652, guid: 3519ac58e5ff54941a4a69512016923c, type: 3}
+  m_Script: {fileID: -1216031652, guid: 548e3dd2d27c1e2d0bdf82f0889cb8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weightMultiplier: 1
   useDiscreteOutlineColor: 0
-  entityMono: {fileID: 5163574902905182399}
   requiredFactionToInteract: 0
   optionalIcon: {fileID: 0}
   optionalOutlineController: {fileID: 0}
@@ -212,7 +231,7 @@ Transform:
   m_GameObject: {fileID: 1392241814005974}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.0625, z: -0.25}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -227,21 +246,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 1392241814005974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1908045241, guid: 8755fc0f8990e9f418149df4a482da57, type: 3}
+  m_Script: {fileID: 1908045241, guid: 292700ef68995bdb2163e35989fc7eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_asset: {fileID: 11400000, guid: 06283675ef003064083719916cdfdbf8, type: 2}
+  m_asset: {fileID: 0}
   skin: {fileID: 0}
+  m_assetRef:
+    m_address:
+      m_low: -2543247459105505089
+      m_high: -8473400880334055702
+  skinRef:
+    m_address:
+      m_low: 0
+      m_high: 0
   color: {r: 1, g: 1, b: 1, a: 0.7019608}
-  emissiveColor: {r: 0.7490197, g: 0.7490197, b: 0.7490197, a: 1}
+  emissiveColor: {r: 1, g: 1, b: 1, a: 1}
   flashColor: {r: 0, g: 0, b: 0, a: 0}
   outlineColor: {r: 1, g: 1, b: 1, a: 0}
   primaryGradientMap: {fileID: 0}
   secondaryGradientMap: {fileID: 0}
   tertiaryGradientMap: {fileID: 0}
-  material: {fileID: 2100000, guid: e9579b7574bbaa146a669beeabfcbb75, type: 2}
+  primaryGradientMapRef:
+    m_address:
+      m_low: 0
+      m_high: 0
+  secondaryGradientMapRef:
+    m_address:
+      m_low: 0
+      m_high: 0
+  tertiaryGradientMapRef:
+    m_address:
+      m_low: 0
+      m_high: 0
+  material: {fileID: 2100000, guid: 59bc0b91f40c6ec4fbfd32bbc510ed3e, type: 2}
   m_startAnimationHash: 0
-  m_startVariantHash: 979642088
+  m_startVariantHash: 0
   animationTimescale: 1
   m_randomStartTime: 0
   processAnimationEvents: 0
@@ -262,7 +301,7 @@ GameObject:
   - component: {fileID: 4217113378505897}
   - component: {fileID: 5163574902905182399}
   - component: {fileID: 114843323942682917}
-  - component: {fileID: 3487422833416946749}
+  - component: {fileID: 2095133460456303263}
   m_Layer: 0
   m_Name: MagicChest
   m_TagString: Untagged
@@ -320,8 +359,7 @@ MonoBehaviour:
       value: 1045606711
   particleOptions:
     particlesToSpawn: []
-    particleSpawnLocations:
-    - {fileID: 7152875579144411600}
+    particleSpawnLocations: []
     particlesToDisableOnLowQuality: []
   objectVariants: []
   spritesToRandomlyFlip: []
@@ -345,14 +383,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1907394786319148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -122692614, guid: 3519ac58e5ff54941a4a69512016923c, type: 3}
+  m_Script: {fileID: -122692614, guid: 548e3dd2d27c1e2d0bdf82f0889cb8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spritesToRotate:
   - {fileID: 114854373770374976}
   - {fileID: 114746071735070035}
   reflectSides: 1
---- !u!114 &3487422833416946749
+--- !u!114 &2095133460456303263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -361,7 +399,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1907394786319148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001df786fc52b6d4b887f93a5eb248ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 276b4b9264304dc2b5f1e3feb621bc98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initialSize: 16
@@ -392,7 +430,7 @@ Transform:
   m_GameObject: {fileID: 8254163439999644172}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1875, z: -0.125}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

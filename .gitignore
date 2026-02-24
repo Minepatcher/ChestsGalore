@@ -80,7 +80,6 @@ crashlytics-build.properties
 .idea/
 
 # Custom
-# Custom
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata*
 /[Aa]ssets/Graphics*
 /[Aa]ssets/ModSDK*

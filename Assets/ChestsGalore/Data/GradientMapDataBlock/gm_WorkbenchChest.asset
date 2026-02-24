@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1835229550, guid: 292700ef68995bdb2163e35989fc7eb0, type: 3}
+  m_Name: gm_WorkbenchChest
+  m_EditorClassIdentifier: 
+  m_overload:
+    m_address:
+      m_low: 0
+      m_high: 0
+  m_address:
+    m_low: -525780469544724481
+    m_high: 3337447187654475592
+  m_dynamicCollections:
+    m_list: []
+  recolorTarget:
+    m_address:
+      m_low: 0
+      m_high: 0
+  mode: 1
+  texture: {fileID: 2800000, guid: 31b6fd401e5b7344dafbd723a8719b17, type: 3}
+  array:
+  - serializedVersion: 2
+    rgba: 4280427790
+  - serializedVersion: 2
+    rgba: 4281480723
+  - serializedVersion: 2
+    rgba: 4281416711
+  - serializedVersion: 2
+    rgba: 4282668292
+  - serializedVersion: 2
+    rgba: 4281357839
+  - serializedVersion: 2
+    rgba: 4281955079
+  - serializedVersion: 2
+    rgba: 4280773898
+  - serializedVersion: 2
+    rgba: 4280913955
+  - serializedVersion: 2
+    rgba: 4280717312
+  - serializedVersion: 2
+    rgba: 4279809295
+  - serializedVersion: 2
+    rgba: 4281115106
+  - serializedVersion: 2
+    rgba: 4282876085
+  - serializedVersion: 2
+    rgba: 4280703889
+  - serializedVersion: 2
+    rgba: 4280235065
+  - serializedVersion: 2
+    rgba: 4280166435
+  - serializedVersion: 2
+    rgba: 4290757100
+  - serializedVersion: 2
+    rgba: 4292435222
+  - serializedVersion: 2
+    rgba: 4289412628
+  - serializedVersion: 2
+    rgba: 4292490496
+  - serializedVersion: 2
+    rgba: 4294923776
+  references:
+    version: 2
+    RefIds: []

@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1876717734, guid: 8755fc0f8990e9f418149df4a482da57, type: 3}
+  m_Script: {fileID: 1876717734, guid: 292700ef68995bdb2163e35989fc7eb0, type: 3}
   m_Name: SpriteAssetManifest
   m_EditorClassIdentifier: 
   spriteAssets:
-  - {fileID: 11400000, guid: 06283675ef003064083719916cdfdbf8, type: 2}
-  - {fileID: 11400000, guid: c687ac57a5bdab742b01b24fa0569068, type: 2}
-  gradientMaps:
-  - {fileID: 2800000, guid: 31b6fd401e5b7344dafbd723a8719b17, type: 3}
-  - {fileID: 2800000, guid: 90e59b4836bcc024a9a4247ac9290e54, type: 3}
-  - {fileID: 2800000, guid: 1e342f8ebe29072458a149346603580b, type: 3}
+  - {fileID: 11400000, guid: 201a00bf91e9dcb4ead63418cb6e688a, type: 2}
+  - {fileID: 11400000, guid: 09dd54c308ba7e84b928fd164cd59a5e, type: 2}
+  - {fileID: 11400000, guid: 8ca4c5fe88f182246b1492baf456c655, type: 2}
+  - {fileID: 11400000, guid: 63ffbc19c5db3254a95df2f4fdeec9cd, type: 2}
+  gradientMaps: []
   transformAnimations: []
