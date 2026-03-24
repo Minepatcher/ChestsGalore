@@ -66,12 +66,27 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-# Packed Addressables
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+# TestRunner generated files
+InitTestScene*.unity*
 
-# Temporary auto-generated Android Assets
-/[Aa]ssets/[Ss]treamingAssets/aa.meta
-/[Aa]ssets/[Ss]treamingAssets/aa/*
+# Addressables default ignores, before user customizations
+/ServerData
+/[Aa]ssets/StreamingAssets/aa*
+/[Aa]ssets/AddressableAssetsData/link.xml*
+/[Aa]ssets/Addressables_Temp*
+# By default, Addressables content builds will generate addressables_content_state.bin
+# files in platform-specific subfolders, for example:
+# /Assets/AddressableAssetsData/OSX/addressables_content_state.bin
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+
+# Visual Scripting auto-generated files
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+
+# Auto-generated scenes by play mode tests
+/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
 # Vim
 *.swp
@@ -80,13 +95,17 @@ crashlytics-build.properties
 .idea/
 
 # Custom
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata*
+/[Pp]ackages*
+/[Pp]rojectSettings*
+/ImportedGameFolders*
+/[Aa]ssets/Data*
+/[Aa]ssets/DefaultVolumeProfile.asset*
+/[Aa]ssets/Examples.zip*
 /[Aa]ssets/Graphics*
 /[Aa]ssets/ModSDK*
 /[Aa]ssets/Plugins*
-/[Aa]ssets/Unity*
 /[Aa]ssets/Resources*
-/[Pp]ackages*
-/[Pp]rojectSettings*
-/[Aa]ssets/Examples*
-/ImportedGameFolders
+/[Aa]ssets/ScriptableDataExamples.zip*
+/[Aa]ssets/Unity*
+/[Aa]ssets/UniversalRenderPipelineGlobalSettings.asset*
+

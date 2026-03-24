@@ -15,4 +15,4 @@ MonoBehaviour:
   modId: 0
   modSettings: {fileID: 11400000, guid: b7120e3ba8a2fb94988c8caf0828b7e6, type: 2}
   logo: {fileID: 0}
-  summary: Create all chests from the game instead of having to search for them.
+  summary: 
