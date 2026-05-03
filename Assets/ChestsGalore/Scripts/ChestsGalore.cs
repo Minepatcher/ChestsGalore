@@ -12,7 +12,7 @@ namespace ChestsGalore.Scripts
 {
     public class ChestsGalore : IMod
     {
-        private const string Version = "0.1.0";
+        private const string Version = "0.3.0";
         internal const string ModID = "ChestsGalore";
         private const string FriendlyName = "Chests Galore";
         private LoadedMod _modInfo;

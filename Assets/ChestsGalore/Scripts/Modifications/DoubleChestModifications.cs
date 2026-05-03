@@ -272,7 +272,7 @@ namespace ChestsGalore.Scripts.Modifications
             // New Recipe
             chest.objectInfo.requiredObjectsToCraft = new List<CraftingObject>{
                 new() { objectID = ObjectID.BaitOnAPole, amount = 1 },
-                new() { objectID = ObjectID.CookedSushi, amount = 5 },
+                new() { objectID = ObjectID.AngleFish, amount = 5 },
                 new() { objectID = ObjectID.AncientGemstone, amount = 2 },
                 new() { objectID = ObjectID.MechanicalPart, amount = 4 }
             };
