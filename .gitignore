@@ -89,5 +89,5 @@ crashlytics-build.properties
 /ImportedGameFolders*
 /[Aa]ssets/ScriptableDataExamples.zip*
 /[Aa]ssets/UniversalRenderPipelineGlobalSettings.asset*
-/[Aa]ssets/Examples.zip*
+/[Aa]ssets/Examples*
 /[Aa]ssets/DefaultVolumeProfile.asset*
