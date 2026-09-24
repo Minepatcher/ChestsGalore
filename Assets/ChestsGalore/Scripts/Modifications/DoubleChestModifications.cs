@@ -142,8 +142,8 @@ namespace ChestsGalore.Scripts.Modifications
                 new() { objectID = ObjectID.MechanicalPart, amount = 4 }
             };
         }
-        /* Titan's Chest */ [EntityModification(ObjectID.BossChest)]
-        private static void EditTitanChest(Entity entity, GameObject authoring, EntityManager entityManager)
+        /* Azeos' Chest */ [EntityModification(ObjectID.BirdBossChest)]
+        private static void EditAzeosChest(Entity entity, GameObject authoring, EntityManager entityManager)
         {
             // Check if valid Chest and set Salvage
             if(!ChestModifications.IsValidChest(authoring, out var chest)) return;
@@ -151,13 +151,13 @@ namespace ChestsGalore.Scripts.Modifications
             
             // New Recipe
             chest.objectInfo.requiredObjectsToCraft = new List<CraftingObject>{
-                new() { objectID = ObjectID.Thumper, amount = 1 },
+                new() { objectID = ObjectID.LargeShinyGlimmeringObject, amount = 1 },
                 new() { objectID = ObjectID.AncientFeather, amount = 5 },
                 new() { objectID = ObjectID.AncientGemstone, amount = 2 },
                 new() { objectID = ObjectID.MechanicalPart, amount = 4 }
             };
         }
-        /* Golden Titan's Chest */ [EntityModification(ObjectID.EasterChest)]
+        /* Golden Titan's Chest */ [EntityModification(ObjectID.EasterTitanChest)]
         private static void EditGoldenTitanChest(Entity entity, GameObject authoring, EntityManager entityManager)
         {
             // Check if valid Chest and set Salvage
@@ -172,7 +172,52 @@ namespace ChestsGalore.Scripts.Modifications
                 new() { objectID = ObjectID.MechanicalPart, amount = 4 }
             };
         }
-        /* Floating Titan's Chest */ [EntityModification(ObjectID.OctopusBossChest)]
+        /* Ra-Akar's Chest */ [EntityModification(ObjectID.ScarabBossChest)]
+        private static void EditRaAkarChest(Entity entity, GameObject authoring, EntityManager entityManager)
+        {
+            // Check if valid Chest and set Salvage
+            if(!ChestModifications.IsValidChest(authoring, out var chest)) return;
+            ChestModifications.SetCanBeSalvaged(chest);
+            
+            // New Recipe
+            chest.objectInfo.requiredObjectsToCraft = new List<CraftingObject>{
+                new() { objectID = ObjectID.Thumper, amount = 1 },
+                new() { objectID = ObjectID.BlastingDung, amount = 5 },
+                new() { objectID = ObjectID.AncientGemstone, amount = 2 },
+                new() { objectID = ObjectID.MechanicalPart, amount = 4 }
+            };
+        }
+        /* Omoroth's Chest */ [EntityModification(ObjectID.OmorothBossChest)]
+        private static void EditOmorothChest(Entity entity, GameObject authoring, EntityManager entityManager)
+        {
+            // Check if valid Chest and set Salvage
+            if(!ChestModifications.IsValidChest(authoring, out var chest)) return;
+            ChestModifications.SetCanBeSalvaged(chest);
+            
+            // New Recipe
+            chest.objectInfo.requiredObjectsToCraft = new List<CraftingObject>{
+                new() { objectID = ObjectID.BaitOctopusBoss, amount = 1 },
+                new() { objectID = ObjectID.BaitIncreasedChanceToGetFishLoot, amount = 5 },
+                new() { objectID = ObjectID.AncientGemstone, amount = 2 },
+                new() { objectID = ObjectID.MechanicalPart, amount = 4 }
+            };
+        }
+        /* Titan's Chest */ [EntityModification(ObjectID.TitanChest)]
+        private static void EditTitanChest(Entity entity, GameObject authoring, EntityManager entityManager)
+        {
+            // Check if valid Chest and set Salvage
+            if(!ChestModifications.IsValidChest(authoring, out var chest)) return;
+            ChestModifications.SetCanBeSalvaged(chest);
+            
+            // New Recipe
+            chest.objectInfo.requiredObjectsToCraft = new List<CraftingObject>{
+                new() { objectID = ObjectID.Thumper, amount = 1 },
+                new() { objectID = ObjectID.AncientFeather, amount = 5 },
+                new() { objectID = ObjectID.AncientGemstone, amount = 2 },
+                new() { objectID = ObjectID.MechanicalPart, amount = 4 }
+            };
+        }
+        /* Floating Titan's Chest */ [EntityModification(ObjectID.FloatingTitanChest)]
         private static void EditFloatingTitanChest(Entity entity, GameObject authoring, EntityManager entityManager)
         {
             // Check if valid Chest and set Salvage
@@ -313,7 +358,6 @@ namespace ChestsGalore.Scripts.Modifications
             // Check if valid Chest and set Salvage
             if(!ChestModifications.IsValidChest(authoring, out var chest)) return;
             ChestModifications.SetCanBeSalvaged(chest);
-            Debug.Log("Sahabar Chest");
             
             // New Recipe
             chest.objectInfo.requiredObjectsToCraft = new List<CraftingObject>{

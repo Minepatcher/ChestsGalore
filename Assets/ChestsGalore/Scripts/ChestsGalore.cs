@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-using ChestsGalore.Scripts.ScriptableObjects;
 using CoreLib;
 using CoreLib.Submodule.Entity;
 using CoreLib.Util.Extension;
@@ -17,50 +14,33 @@ namespace ChestsGalore.Scripts
         private const string FriendlyName = "Chests Galore";
         private LoadedMod _modInfo;
         private static readonly Logger Log = new (FriendlyName);
-        private static readonly List<ModObjectIDCategory>  ModObjectIDCategories = new();
-        private static readonly List<ObjectIDCategory> ObjectIDCategories = new();
         
         public void EarlyInit()
         {
-            Log.LogInfo($"{FriendlyName} version: {Version}");
+            Log.LogInfo($"v{Version}");
             CoreLibMod.LoadSubmodule(typeof(EntityModule));
             _modInfo = this.GetModInfo();
             if (_modInfo == null)
             {
                 Log.LogError($"Failed to load {FriendlyName}: metadata not found!");
-                return;
             }
-            ModObjectIDCategories.AddRange(_modInfo.Assets.OfType<ModObjectIDCategory>());
         }
 
         public void Init()
         {
-            Log.LogInfo($"{FriendlyName} Initialize");
-            foreach (var category in ModObjectIDCategories)
+            if (ScriptableData.TryGetDataBlock(new DataBlockAddress("c390e528-719a-b304-4a95-11c0c4566a6c"),
+                    out ObjectIDCategoryDataBlock chestCategoryBlock))
             {
-                var objCategory = category.GetObjectIDCategory();
-                ObjectIDCategories.Add(objCategory);
-                ObjectIDCategoryManager.Add(objCategory);
+                chestCategoryBlock.Add(API.Authoring.GetObjectID("ChestsGalore:MagicChest"));
             }
-            var craftingSelectorUI = Manager.ui.creativeModeUI;
-            var categoryFilters = craftingSelectorUI.GetComponentsInChildren<CraftingSelectorFilterCategoryUI>(true);
-            foreach (var filter in categoryFilters)
+            if (ScriptableData.TryGetDataBlock(new DataBlockAddress("c2635c2a-f081-4a83-a448-c7facfa173c1"),
+                    out ObjectIDCategoryDataBlock workbenchCategoryBlock))
             {
-                var currCategories = filter.GetValue<List<ObjectIDCategory>>("categories");
-                List<ObjectIDCategory> newCategories = new();
-                switch (filter.gameObject.name)
-                {
-                    case "CategoryFilter":
-                        newCategories = ObjectIDCategories.Where(x => !x.name.Contains('_')).ToList();
-                        break;
-                    case "SubCategoryFilter":
-                        newCategories = ObjectIDCategories.Where(x => x.name.Contains('_')).ToList();
-                        break;
-                }
-                currCategories.AddRange(newCategories);
-                filter.SetValue("categories", currCategories);
+                workbenchCategoryBlock.Add(API.Authoring.GetObjectID("ChestsGalore:WorkbenchChest"));
+                workbenchCategoryBlock.Add(API.Authoring.GetObjectID("ChestsGalore:WorkbenchDoubleChest"));
+                workbenchCategoryBlock.Add(API.Authoring.GetObjectID("ChestsGalore:WorkbenchMagicChest"));
             }
-            Log.LogInfo($"{FriendlyName} loaded successfully");
+            Log.LogInfo($"Loaded Successfully...");
         }
 
         public void Shutdown() { }

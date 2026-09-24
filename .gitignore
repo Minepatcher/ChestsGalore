@@ -100,12 +100,11 @@ InitTestScene*.unity*
 /ImportedGameFolders*
 /[Aa]ssets/Data*
 /[Aa]ssets/DefaultVolumeProfile.asset*
-/[Aa]ssets/Examples.zip*
+/[Aa]ssets/Examples*
 /[Aa]ssets/Graphics*
 /[Aa]ssets/ModSDK*
 /[Aa]ssets/Plugins*
 /[Aa]ssets/Resources*
-/[Aa]ssets/ScriptableDataExamples.zip*
 /[Aa]ssets/Unity*
 /[Aa]ssets/UniversalRenderPipelineGlobalSettings.asset*
 

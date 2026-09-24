@@ -35,7 +35,7 @@ MonoBehaviour:
     amount: 20
   canCraft:
   - objectName: None
-    amount: 1
+    amount: 0
   - objectName: ChestsGalore:MagicChest
     amount: 1
   relatedWorkbenches:
@@ -51,6 +51,3 @@ MonoBehaviour:
     mRTL_ConvertNumbers: 0
     m_DontLocalizeParameters: 0
   skin: 0
-  title: 
-  leftTitle: 
-  rightTitle: 

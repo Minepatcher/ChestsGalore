@@ -56,11 +56,17 @@ MonoBehaviour:
     amount: 1
   - objectName: None
     amount: 1
-  - objectName: BossChest
+  - objectName: BirdBossChest
     amount: 1
-  - objectName: EasterChest
+  - objectName: EasterTitanChest
     amount: 1
-  - objectName: OctopusBossChest
+  - objectName: ScarabBossChest
+    amount: 1
+  - objectName: OmorothBossChest
+    amount: 1
+  - objectName: TitanChest
+    amount: 1
+  - objectName: FloatingTitanChest
     amount: 1
   relatedWorkbenches:
   - ChestsGalore:WorkbenchDoubleChestNext
@@ -84,6 +90,3 @@ MonoBehaviour:
     mRTL_ConvertNumbers: 0
     m_DontLocalizeParameters: 0
   skin: 0
-  title: 
-  leftTitle: 
-  rightTitle: 
