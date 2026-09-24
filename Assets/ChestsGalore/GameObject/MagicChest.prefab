@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4682238993954473}
   - component: {fileID: 114854373770374976}
+  - component: {fileID: 4531438115591246071}
   m_Layer: 0
   m_Name: SpriteObject
   m_TagString: Untagged
@@ -44,8 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 1908045241, guid: 292700ef68995bdb2163e35989fc7eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_asset: {fileID: 0}
-  skin: {fileID: 0}
   m_assetRef:
     m_address:
       m_low: -2543247459105505089
@@ -58,9 +57,18 @@ MonoBehaviour:
   emissiveColor: {r: 1, g: 1, b: 1, a: 1}
   flashColor: {r: 0, g: 0, b: 0, a: 0}
   outlineColor: {r: 1, g: 1, b: 1, a: 0}
-  primaryGradientMap: {fileID: 0}
-  secondaryGradientMap: {fileID: 0}
-  tertiaryGradientMap: {fileID: 0}
+  primaryGradientMap:
+    m_address:
+      m_low: 0
+      m_high: 0
+  secondaryGradientMap:
+    m_address:
+      m_low: 0
+      m_high: 0
+  tertiaryGradientMap:
+    m_address:
+      m_low: 0
+      m_high: 0
   primaryGradientMapRef:
     m_address:
       m_low: 0
@@ -85,6 +93,20 @@ MonoBehaviour:
   syncSprite: 0
   maskChannel: 0
   maskInteraction: 0
+--- !u!114 &4531438115591246071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261466667890045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444a65c77aab47d40b26141aeb042d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialName: UGC SpriteObject Lit
+  useModApi: 1
 --- !u!1 &1288852072713476
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,9 +156,6 @@ MonoBehaviour:
   requiredFactionToInteract: 0
   optionalIcon: {fileID: 0}
   optionalOutlineController: {fileID: 0}
-  additionalOutlineControllers: []
-  spriteObjects:
-  - {fileID: 114854373770374976}
   onUseActions:
   - m_PersistentCalls:
       m_Calls:
@@ -168,9 +187,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   radius: 1.3
-  interactingPoints: []
+  subInteractingData: []
   allowToUseOnlyWhenClaimed: 0
   ignorePlayerDirection: 0
+  ignorePlayerDirectionRadiusPercentage: 1
+  requireLineOfSight: 0
 --- !u!1 &1385680789944758
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4057010323191266}
   - component: {fileID: 114746071735070035}
+  - component: {fileID: 6379113198728138641}
   m_Layer: 22
   m_Name: SpriteShadow
   m_TagString: ExcludeFromSpriteAutoSort
@@ -248,8 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 1908045241, guid: 292700ef68995bdb2163e35989fc7eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_asset: {fileID: 0}
-  skin: {fileID: 0}
   m_assetRef:
     m_address:
       m_low: -2543247459105505089
@@ -262,9 +282,18 @@ MonoBehaviour:
   emissiveColor: {r: 1, g: 1, b: 1, a: 1}
   flashColor: {r: 0, g: 0, b: 0, a: 0}
   outlineColor: {r: 1, g: 1, b: 1, a: 0}
-  primaryGradientMap: {fileID: 0}
-  secondaryGradientMap: {fileID: 0}
-  tertiaryGradientMap: {fileID: 0}
+  primaryGradientMap:
+    m_address:
+      m_low: 0
+      m_high: 0
+  secondaryGradientMap:
+    m_address:
+      m_low: 0
+      m_high: 0
+  tertiaryGradientMap:
+    m_address:
+      m_low: 0
+      m_high: 0
   primaryGradientMapRef:
     m_address:
       m_low: 0
@@ -289,6 +318,20 @@ MonoBehaviour:
   syncSprite: 0
   maskChannel: 0
   maskInteraction: 0
+--- !u!114 &6379113198728138641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392241814005974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444a65c77aab47d40b26141aeb042d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialName: UGC SpriteObject Shadow
+  useModApi: 1
 --- !u!1 &1907394786319148
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +399,7 @@ MonoBehaviour:
       value: 926580047
     deathSfx:
       value: 1045606711
+    soundsToPlay: []
   particleOptions:
     particlesToSpawn: []
     particleSpawnLocations: []
@@ -484,6 +528,9 @@ MonoBehaviour:
   centerInParent: 0
   activeInPlatforms: -1
   activeInStoreFronts: -1
+  onResized:
+    m_PersistentCalls:
+      m_Calls: []
   renderOnStart: 0
   keepEnabledOnStart: 1
   alwaysUpdateDynamicTextPixelPos: 1
@@ -492,7 +539,6 @@ MonoBehaviour:
   isHidden: 0
   trackDynamicTextCharacterEndPositions: 0
   localize: 0
-  topAligned: 0
   languagesToForceLatinFont: 
   localizePlaceholders: 0
   dontResetEffectsOnRender: 0

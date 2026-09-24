@@ -98,7 +98,6 @@ namespace ChestsGalore.Scripts.Modifications
             // Check if valid Chest and set Salvage
             if(!IsValidChest(authoring, out var chest)) return;
             SetCanBeSalvaged(chest);
-            Debug.Log("Relucite Chest");
             
             // New Recipe
             chest.objectInfo.requiredObjectsToCraft = new List<CraftingObject>{
@@ -112,7 +111,6 @@ namespace ChestsGalore.Scripts.Modifications
             // Check if valid Chest and set Salvage
             if(!IsValidChest(authoring, out var chest)) return;
             SetCanBeSalvaged(chest);
-            Debug.Log("Plain Chest");
             
             // New Recipe
             chest.objectInfo.requiredObjectsToCraft = new List<CraftingObject>{

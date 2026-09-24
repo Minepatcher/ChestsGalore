@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1489280413, guid: 40304609e4ab92d86e423ca079ea6b93, type: 3}
+  m_Name: ChestsGalore_SubCategories
+  m_EditorClassIdentifier: 
+  m_overload:
+    m_address:
+      m_low: 0
+      m_high: 0
+  m_address:
+    m_low: 6977239262077533630
+    m_high: 962333426916361448
+  m_dynamicCollections:
+    m_list: []
+  m_staticReferences:
+  - m_dataBlockRef:
+      m_address:
+        m_low: -5547183931493653208
+        m_high: 7812151906663503178
+    m_data:
+      rid: -2
+  - m_dataBlockRef:
+      m_address:
+        m_low: 5369399620858502186
+        m_high: -4507080887430068060
+    m_data:
+      rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
